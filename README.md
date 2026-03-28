@@ -1,8 +1,15 @@
 # FoM Datamined Insanity
 
+[![Fields of Mistria on Steam](https://img.shields.io/badge/Steam-Fields_of_Mistria-1b2838?logo=steam&logoColor=white)](https://store.steampowered.com/app/2142790/Fields_of_Mistria/)
+[![MOMI Mod Loader](https://img.shields.io/badge/Mod_Loader-MOMI-blueviolet)](https://github.com/mods-of-mistria/mods-of-mistria-installer)
+[![Related: mistria-notes](https://img.shields.io/badge/Related-mistria--notes-orange)](https://github.com/AnnaNomoly/mistria-notes)
+[![License: CC0](https://img.shields.io/badge/License-CC0-lightgrey)](https://creativecommons.org/publicdomain/zero/1.0/)
+
 Community-maintained reference for Fields of Mistria internals, reverse-engineered via Ghidra, `__fiddle__.json`, and YYTK runtime probing.
 
 **Game version pinned: 0.14.x** — verify with `tools/query_fiddle.py --prefix version` before using for a newer patch.
+
+> **See also:** [mistria-notes](https://github.com/AnnaNomoly/mistria-notes) — version-organized game data snapshots (v0.11–v0.15.1) and YYTK script call documentation (e.g. `gml_Script_modify_health@Ari@Ari`). Complementary to this repo's focus on spawn systems and hook catalogs.
 
 ## What's here
 
