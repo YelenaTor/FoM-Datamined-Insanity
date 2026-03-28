@@ -1,6 +1,6 @@
 # GML Script Catalog
 
-> Source: `discover_scripts.py` — full data.win STRG scan, FoM 0.14.x (2026-03-28)
+> Source: `discover_scripts.py` — full data.win STRG scan, FoM 0.15.x (2026-03-28)
 > **2340 unique script names** across 18 areas.
 
 This file contains the primary Option B injection target analysis. For the complete raw list, run `tools/discover_scripts.py --game-path <path>`.

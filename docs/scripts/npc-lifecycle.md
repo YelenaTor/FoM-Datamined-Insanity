@@ -1,6 +1,6 @@
 # NPC Lifecycle GML Scripts
 
-> Source: `discover_npcs.py` + `discover_scripts.py`, FoM 0.14.x (2026-03-28)
+> Source: `discover_npcs.py` + `discover_scripts.py`, FoM 0.15.x (2026-03-28)
 
 ## Key hook targets
 

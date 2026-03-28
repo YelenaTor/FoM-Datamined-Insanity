@@ -1,6 +1,6 @@
 # Surface Node Placement
 
-> Source: data.win ROOM chunk scan + __fiddle__.json, FoM 0.14.x (2026-03-28)
+> Source: data.win ROOM chunk scan + __fiddle__.json, FoM 0.15.x (2026-03-28)
 
 Surface-world resource nodes (farm, narrows, deep_woods, abandoned_mines) are placed by room-start GML scripts. Positions are NOT stored in `__fiddle__.json` or in the ROOM chunk — they are hardcoded in the compiled bytecode.
 

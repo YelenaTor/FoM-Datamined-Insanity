@@ -1,6 +1,6 @@
 # GMS2 YYC Binary Format (data.win)
 
-> Verified: FoM 0.14.x — Ghidra + Python binary parser (2026-03-28)
+> Verified: FoM 0.15.x — Ghidra + Python binary parser (2026-03-28)
 
 Fields of Mistria ships as a GameMaker Studio 2 YYC (YoYo Compiler) Windows build. The game data is stored in `data.win` in the FORM chunk container format.
 
@@ -24,11 +24,11 @@ FORM
 ├── SHDR   — shaders
 ├── FONT   — fonts
 ├── TMLN   — timelines
-├── OBJT   — object definitions (254 total in FoM 0.14.x)
+├── OBJT   — object definitions (254 total in FoM 0.15.x)
 ├── ACRV   — animation curves
 ├── SEQN   — sequences
 ├── TAGS   — tags
-├── ROOM   — room definitions (214 rooms in FoM 0.14.x)
+├── ROOM   — room definitions (214 rooms in FoM 0.15.x)
 ├── DAFL   — data files
 ├── EMBI   — embedded images
 ├── TPAG   — texture page entries
@@ -63,7 +63,7 @@ When building a string lookup dict, key both `off` (→ length) and `off + 4` (�
 
 ## OBJT chunk
 
-Object definitions. 254 objects total in FoM 0.14.x.
+Object definitions. 254 objects total in FoM 0.15.x.
 
 ```
 OBJT header
@@ -79,7 +79,7 @@ OBJT header
 
 ## ROOM chunk
 
-Room definitions. 214 rooms in FoM 0.14.x.
+Room definitions. 214 rooms in FoM 0.15.x.
 
 ```
 ROOM header
@@ -102,7 +102,7 @@ ROOM header
 
 ## GML script names
 
-All script names (2340 total in FoM 0.14.x) follow the pattern:
+All script names (2340 total in FoM 0.15.x) follow the pattern:
 ```
 gml_Script_<name>
 gml_Script_<name>@<ClassName>@<ClassName>    # method on a struct/class

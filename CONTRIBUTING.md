@@ -10,7 +10,7 @@
 ## Format rules
 
 - Always note the FoM version you tested against at the top of any significant addition:
-  `> Verified: FoM 0.14.x`
+  `> Verified: FoM 0.15.x`
 - For script names: only mark `[CONFIRMED]` if you have verified the name exists in `data.win` (e.g. via `discover_scripts.py` output or Ghidra).
 - For fiddle keys: paste the exact `key = value` output from `query_fiddle.py`.
 
@@ -26,7 +26,7 @@
 When adding a finding, include the source:
 
 ```
-Source: __fiddle__.json key scan, FoM 0.14.x (2026-03-28)
-Source: Ghidra decompile of FieldsOfMistria.exe, FoM 0.14.x
-Source: YYTK runtime probe via gml_Script_initialize_on_room_start, FoM 0.14.x
+Source: __fiddle__.json key scan, FoM 0.15.x (2026-03-28)
+Source: Ghidra decompile of FieldsOfMistria.exe, FoM 0.15.x
+Source: YYTK runtime probe via gml_Script_initialize_on_room_start, FoM 0.15.x
 ```

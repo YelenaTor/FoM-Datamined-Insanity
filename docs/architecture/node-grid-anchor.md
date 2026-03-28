@@ -1,6 +1,6 @@
 # Grid / Anchor / Node Runtime System
 
-> Verified: FoM 0.14.x — YYTK runtime probing + __fiddle__.json scan (2026-03-28)
+> Verified: FoM 0.15.x — YYTK runtime probing + __fiddle__.json scan (2026-03-28)
 
 FoM's resource node system is entirely runtime-managed. There are no pre-placed node instances in the ROOM chunk (confirmed by scanning all 214 rooms in data.win — see [yyc-runtime.md](yyc-runtime.md)).
 

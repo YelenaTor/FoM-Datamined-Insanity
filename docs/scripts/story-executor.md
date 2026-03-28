@@ -1,6 +1,6 @@
 # StoryExecutor / Cutscene Scripts
 
-> Source: `discover_scripts.py`, FoM 0.14.x (2026-03-28)
+> Source: `discover_scripts.py`, FoM 0.15.x (2026-03-28)
 
 FoM's cutscene system is driven by `StoryExecutor`. All quest dialogue, NPC talk trees, and story triggers route through it.
 

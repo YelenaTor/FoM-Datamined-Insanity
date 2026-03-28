@@ -1,6 +1,6 @@
 # Dungeon Biome Ore Vote Tables
 
-> Source: `__fiddle__.json` key `dungeons/dungeons/biomes/<biome>/<pool>`, FoM 0.14.x (2026-03-28)
+> Source: `__fiddle__.json` key `dungeons/dungeons/biomes/<biome>/<pool>`, FoM 0.15.x (2026-03-28)
 
 FoM dungeons use weighted probabilistic spawning. Each biome has pools (`ore_rock`, `seam_rock`, `small_rock`). On each floor, the game rolls against the pool weights to place nodes in empty cells.
 

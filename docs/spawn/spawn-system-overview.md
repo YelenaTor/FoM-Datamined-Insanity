@@ -1,6 +1,6 @@
 # Spawn System Overview
 
-> Source: data.win ROOM chunk scan + __fiddle__.json, FoM 0.14.x (2026-03-28)
+> Source: data.win ROOM chunk scan + __fiddle__.json, FoM 0.15.x (2026-03-28)
 
 ## Key Finding
 

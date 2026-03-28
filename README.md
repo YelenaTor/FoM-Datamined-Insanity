@@ -7,7 +7,7 @@
 
 Community-maintained reference for Fields of Mistria internals, reverse-engineered via Ghidra, `__fiddle__.json`, and YYTK runtime probing.
 
-**Game version pinned: 0.14.x** — verify with `tools/query_fiddle.py --prefix version` before using for a newer patch.
+**Game version pinned: 0.15.x** — verify with `tools/query_fiddle.py --prefix version` before using for a newer patch.
 
 > **See also:** [mistria-notes](https://github.com/AnnaNomoly/mistria-notes) — version-organized game data snapshots (v0.11–v0.15.1) and YYTK script call documentation (e.g. `gml_Script_modify_health@Ari@Ari`). Complementary to this repo's focus on spawn systems and hook catalogs.
 

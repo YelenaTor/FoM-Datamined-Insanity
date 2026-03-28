@@ -1,6 +1,6 @@
 # Confirmed GML Hook Targets
 
-> Source: data.win STRG scan via `discover_scripts.py`, FoM 0.14.x (2026-03-28)
+> Source: data.win STRG scan via `discover_scripts.py`, FoM 0.15.x (2026-03-28)
 > `[CONFIRMED]` = verified present in data.win string table.
 
 ## Resource node tool scripts

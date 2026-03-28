@@ -1,6 +1,6 @@
 # Area / Location IDs
 
-> Source: `__fiddle__.json` key scan under `locations/`, FoM 0.14.x (2026-03-28)
+> Source: `__fiddle__.json` key scan under `locations/`, FoM 0.15.x (2026-03-28)
 > **79 locations** total.
 
 Format: `location_id  →  name_key  music_path`

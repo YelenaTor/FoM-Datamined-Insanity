@@ -1,6 +1,6 @@
 # Item IDs
 
-> Source: `__fiddle__.json` — NPC gift lists, store stock, forageables, FoM 0.14.x (2026-03-28)
+> Source: `__fiddle__.json` — NPC gift lists, store stock, forageables, FoM 0.15.x (2026-03-28)
 
 FoM stores items by string ID throughout `__fiddle__.json`. There is no single `items/` key — IDs appear in gift preferences, store stock, and recipe data.
 

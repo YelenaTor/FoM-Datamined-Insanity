@@ -1,6 +1,6 @@
 # NPC IDs
 
-> Source: `__fiddle__.json` key scan under `npcs/`, FoM 0.14.x (2026-03-28)
+> Source: `__fiddle__.json` key scan under `npcs/`, FoM 0.15.x (2026-03-28)
 > **34 NPCs** with fiddle data.
 
 ## NPC list with key data
