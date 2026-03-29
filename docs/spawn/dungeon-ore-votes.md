@@ -4,6 +4,41 @@
 
 FoM dungeons use weighted probabilistic spawning. Each biome has pools (`ore_rock`, `seam_rock`, `small_rock`). On each floor, the game rolls against the pool weights to place nodes in empty cells.
 
+## Biome index mapping
+
+Biomes are stored under `dungeons/dungeons/biomes/<index>` in `__fiddle__.json`. The index is the integer key used internally by FoM; the EFL biome string is how you reference them in `spawnRules.dungeonVotes`.
+
+| Index | EFL biome string | Floor range |
+|:------|:----------------|:------------|
+| 0 | `upper_mines` | Floors 1–19 |
+| 1 | `tide_caverns` | Floors 20–39 |
+| 2 | `deep_earth` | Floors 40–59 |
+| 3 | `lava_caves` | Floors 60–79 |
+| 4 | `ancient_ruins` | Floors 80+ |
+
+## Complete pool vocabulary
+
+The pools visible in fiddle data for ore biomes are `ore_rock`, `seam_rock`, `small_rock`. From live probe and broader fiddle scan, FoM also uses these pools in other contexts:
+
+| Pool | Contents |
+|:-----|:---------|
+| `ore_rock` | Primary ore nodes |
+| `seam_rock` | Seam ore nodes |
+| `small_rock` | Small rock nodes |
+| `large_rock` | Large rock obstacles |
+| `enemy` | Enemy spawns |
+| `junk` | Junk/debris nodes |
+| `breakable` | Breakable objects |
+| `chest` | Treasure chests |
+| `fish` | Fishing spots |
+| `bug` | Bug catch spots |
+| `forageable` | Forageable plants |
+| `void_rock` | Void-biome rock nodes |
+| `void_herb` | Void-biome herb nodes |
+| `void_pearl` | Void-biome pearl nodes |
+
+> Not all pools appear in every biome's fiddle data — they may be sparse or zeroed-out. The ore biomes in fiddle only show `ore_rock`, `seam_rock`, and `small_rock` with real weights.
+
 ## Biome vote tables
 
 ### Upper Mines (floors 1–19)
@@ -91,4 +126,4 @@ To add a custom EFL ore to a dungeon biome, declare in `spawnRules.dungeonVotes`
 ]
 ```
 
-EFL will hook `gml_Script_create_node_prototypes` and call `gml_Script_register_node@Anchor@Anchor` (RUNTIME_VERIFY pending) to inject the entry.
+EFL hooks `gml_Script_create_node_prototypes` (script index 3238, confirmed via EFL_Probe 2026-03-29) and calls `gml_Script_register_node@Anchor@Anchor` (script index 242, confirmed via EFL_Probe 2026-03-29) to inject the entry. The struct argument layout for `register_node` is still under investigation — a runtime `EnumInstanceMembers` probe is needed to map field names.

@@ -5,6 +5,26 @@
 
 This file contains the primary Option B injection target analysis. For the complete raw list, run `tools/discover_scripts.py --game-path <path>`.
 
+## Runtime discovery approach (EFL_Probe methodology)
+
+FoM uses YYC — scripts are native C++ functions, so static STRG scanning gives names but not live call order or argument types. To confirm hook candidates at runtime, EFL_Probe was built as a standalone Aurie module (separate from EFL.dll).
+
+**Phase 1 — Discovery scan**: At `ModuleInitialize`, enumerate `YYTK::GetScriptData(0..N)` stopping after 500 consecutive misses. For each `CScript*`, read `m_Code->GetName()` (works in YYC mode even though `m_Code` is otherwise unused). Filter by keyword. This produces an indexed list of all probe-relevant script names with their array indices.
+
+**Phase 2 — Live hooks**: For each candidate, call `GetNamedRoutinePointer(name, &ptr)`, cast to `CScript*`, extract `m_Functions->m_ScriptFunction`, then `MmCreateHook(module, name, hookFn, &trampoline)`. When the script fires, log all args.
+
+**Key script indices confirmed 2026-03-29**:
+
+| Script | Index | Confirmed |
+|:-------|:------|:----------|
+| `gml_Script_register_node@Anchor@Anchor` | 242 | Yes — fires with single struct arg on new game |
+| `gml_Script_spawn_crafting_menu` | 1635 | Yes — fires on opening any crafting station |
+| `gml_Script_write_node@Grid@Grid` | 3181 | Yes — fires during Farm entry |
+| `gml_Script_attempt_to_write_object_node` | 3251 | Yes — fires during Farm entry, 9 args |
+| `gml_Script_create_node_prototypes` | 3238 | Yes — fires once per room on grid init |
+
+The `discover_scripts.py` static scan and the EFL_Probe runtime approach are complementary: static gives the full name table; live probe gives call order, arg types, and confirms which candidates actually fire for target game actions.
+
 ## Option B injection targets
 
 These are the confirmed binding points for Script Injection (EFL Unit 13).
